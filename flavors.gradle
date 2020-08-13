@@ -1,0 +1,28 @@
+ext.flavorConfig = {
+
+    flavorDimensions "version"
+    productFlavors {
+        punkApi {
+            dimension "version"
+            ext.myApplicationIdSuffix = '.punkApi'
+            buildConfigField "String", "BASE_URL", '"https://api.punkapi.com/v2/"'
+        }
+        demo {
+            dimension "version"
+            ext.myApplicationIdSuffix = '.demo'
+            buildConfigField "String", "BASE_URL", '"https://8fca7c8b.ngrok.io"' // Sasho's url
+        }
+    }
+
+    productFlavors.all { flavor ->
+        if (flavor.hasProperty('myApplicationIdSuffix') && isApplicationProject()) {
+            flavor.applicationIdSuffix = flavor.myApplicationIdSuffix
+        }
+    }
+}
+
+def isApplicationProject() {
+    return project.android.class.simpleName.startsWith('BaseAppModuleExtension')
+    // in AGP 3.1.x with library modules instead of feature modules:
+    // return project.android instanceof com.android.build.gradle.AppExtension
+}

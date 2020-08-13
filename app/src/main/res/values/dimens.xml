@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pageMargin">20dp</dimen>
+    <dimen name="offset">30dp</dimen>
+    <dimen name="app_name_size">60sp</dimen>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="margin_start_edit_text_home">100dp</dimen>
+    <dimen name="margin_top_beer_list">10dp</dimen>
+    <dimen name="search_icon_size">30dp</dimen>
+    <dimen name="margin_end_search_icon">20dp</dimen>
+    <dimen name="margin_beer_item_image">10dp</dimen>
+    <dimen name="margin_start_beer_item_name">10dp</dimen>
+    <dimen name="beer_item_name_size">25sp</dimen>
+    <dimen name="beer_item_tagline_size">20sp</dimen>
+    <dimen name="no_beers_text_size">35sp</dimen>
+    <dimen name="no_favorite_beer_text_size">35sp</dimen>
+
+    <!-- dimens for detail_beer_screen.xml -->
+    <dimen name="detail_beer_margin">10dp</dimen>
+    <dimen name="detail_beer_name_size">20sp</dimen>
+    <dimen name="detail_beer_progress_bar_margin_start">20dp</dimen>
+    <dimen name="detail_beer_title_text_size">16sp</dimen>
+
+    <!-- dimens for favorite_beer_item.xml -->
+    <dimen name="pageMarginAndOffset">50dp</dimen>
+    <dimen name="card_view_margin_top">10dp</dimen>
+    <dimen name="card_view_margin_bottom">60dp</dimen>
+    <dimen name="beer_image_horizontal_margin">20dp</dimen>
+    <dimen name="beer_image_height">170dp</dimen>
+    <dimen name="beer_image_width">150dp</dimen>
+    <dimen name="beer_name_horizontal_margin">10dp</dimen>
+    <dimen name="beer_tagline_horizontal_margin">10dp</dimen>
+    <dimen name="between_views_margin">5dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+
+    <!-- dimens for filter_screen.xml -->
+    <dimen name="yeast_text_view_horizontal_margin">20dp</dimen>
+    <dimen name="edit_text_height">30dp</dimen>
+    <dimen name="helper_title_margin_start">15dp</dimen>
+    <dimen name="helper_title_text_size">18sp</dimen>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="title_margin_top">10dp</dimen>
+
+    <!-- dimens for settings_screen.xml -->
+    <dimen name="user_image_size">150dp</dimen>
+    <dimen name="user_email_text_size">18sp</dimen>
+    <dimen name="settings_horizontal_margin">10dp</dimen>
+    <dimen name="settings_vertical_margin">20dp</dimen>
+    <dimen name="section_title_margin_start">20dp</dimen>
+    <dimen name="section_title_text_size">20sp</dimen>
+    <dimen name="settings_sections_vertical_margin">10dp</dimen>
+    <dimen name="settings_sections_height">60dp</dimen>
+    <dimen name="switch_margin_end">25dp</dimen>
+    <dimen name="copyright_text_size">15sp</dimen>
+</resources>

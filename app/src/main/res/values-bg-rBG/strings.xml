@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BeerApp</string>
+    <string name="beer_app">Beer App</string>
+    <string name="app_version">V 1.0.0</string>
+    <string name="beer_image_logo">бира</string>
+    <string name="text_login_button">Вход</string>
+    <string name="beer_list_text">Бири</string>
+    <string name="beer_details">Детайли</string>
+    <string name="abv">abv</string>
+    <string name="ebc">ebc</string>
+    <string name="ibu">ibu</string>
+    <string name="food_pairing">Съчетаване на храни:</string>
+    <string name="brewers_tips">Пивоварни съвети:</string>
+
+    <string name="yeast">Дрожди</string>
+    <string name="hops">Хмел</string>
+    <string name="malt">Малц</string>
+    <string name="food">Храна</string>
+    <string name="ibu_capitalized">IBU</string>
+    <string name="from">от</string>
+    <string name="to">до</string>
+    <string name="abv_capitalized">ABV</string>
+    <string name="ebc_capitalized">EBC</string>
+    <string name="brewed">Произведена</string>
+    <string name="before">преди</string>
+    <string name="after">след</string>
+    <string name="filters">Филтри</string>
+    <string name="clear_filters">Изчисти филтрите</string>
+    <string name="favoritize">Добави в любими</string>
+
+    <string name="could_not_be_added_message">Максималният брой на любими бири\n не може да бъде надвишен!</string>
+    <string name="dice">Зар</string>
+    <string name="beer_bottle">бирена бутилка</string>
+    <string name="user_image">снимка на потребител</string>
+    <string name="notifications">Нотификации</string>
+    <string name="language">Език</string>
+    <string name="theme">Тъмна Тема</string>
+    <string name="logout">Изход</string>
+    <string name="imperia_online_2020">Imperia Online 2020 ©</string>
+
+    <string name="fav_beer_added">Бирата беше добавена в Любими!</string>
+    <string name="fav_beer_removed">Бирата беше премахната от Любими!</string>
+
+    <string name="profile">Профил</string>
+    <string name="favorites">Любими</string>
+    <string name="home">Начало</string>
+    <string name="get_random_beer_from_favorites">Произволна бира\nот Любими</string>
+    <string name="enter_beer_name"> Въведете име на бира </string>
+
+    <string name="foods_example">храни, подходящи за дадената бира</string>
+    <string name="notification_title">Здравей!</string>
+    <string name="notification_channel_id">myNotificationChannelId</string>
+    <string name="notification_body">Хей! Скоро не си проверявал любимите си бири!</string>
+    <string name="notification_channel_name">Notification Message</string>
+    <string name="you_haven_t_added_favorite_beer_yet">Все още не си добавил Любими бири!</string>
+    <string name="there_are_no_beers_to_show">Няма налични бири!</string>
+</resources>

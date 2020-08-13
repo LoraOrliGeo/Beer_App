@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <data>
+
+        <variable
+            name="filtersViewModel"
+            type="com.example.domain.controllers.view_models.FiltersViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/bgColor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/bgColor">
+
+            <TextView
+                android:id="@+id/yeast_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/yeast_text_view_horizontal_margin"
+                android:layout_marginEnd="@dimen/yeast_text_view_horizontal_margin"
+                android:text="@string/yeast"
+                app:layout_constraintBottom_toTopOf="@id/yeast_filter"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/yeast_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:inputType="text"
+                app:layout_constraintBottom_toTopOf="@id/hops_text"
+                app:layout_constraintLeft_toLeftOf="@id/yeast_text"
+                app:layout_constraintRight_toRightOf="@id/yeast_text"
+                app:layout_constraintTop_toBottomOf="@id/yeast_text" />
+
+            <ImageView
+                android:id="@+id/clear_yeast_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/yeast_filter"
+                app:layout_constraintRight_toRightOf="@id/yeast_filter"
+                app:layout_constraintTop_toTopOf="@id/yeast_filter"
+                app:srcCompat="@drawable/clear_current_filter" />
+
+            <TextView
+                android:id="@+id/hops_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hops"
+                app:layout_constraintBottom_toTopOf="@id/hops_filter"
+                app:layout_constraintLeft_toLeftOf="@id/yeast_text"
+                app:layout_constraintRight_toRightOf="@id/yeast_filter"
+                app:layout_constraintTop_toBottomOf="@id/yeast_filter" />
+
+            <EditText
+                android:id="@+id/hops_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:inputType="text"
+                app:layout_constraintBottom_toTopOf="@id/malt_text"
+                app:layout_constraintLeft_toLeftOf="@id/hops_text"
+                app:layout_constraintRight_toRightOf="@id/hops_text"
+                app:layout_constraintTop_toBottomOf="@id/hops_text" />
+
+            <ImageView
+                android:id="@+id/clear_hops_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/hops_filter"
+                app:layout_constraintRight_toRightOf="@id/hops_filter"
+                app:layout_constraintTop_toTopOf="@id/hops_filter"
+                app:srcCompat="@drawable/clear_current_filter" />
+
+            <TextView
+                android:id="@+id/malt_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/malt"
+                app:layout_constraintBottom_toTopOf="@id/malt_filter"
+                app:layout_constraintLeft_toLeftOf="@id/hops_filter"
+                app:layout_constraintRight_toRightOf="@id/hops_filter"
+                app:layout_constraintTop_toBottomOf="@id/hops_filter" />
+
+            <EditText
+                android:id="@+id/malt_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:inputType="text"
+                app:layout_constraintBottom_toTopOf="@id/food_text"
+                app:layout_constraintLeft_toLeftOf="@id/malt_text"
+                app:layout_constraintRight_toRightOf="@id/malt_text"
+                app:layout_constraintTop_toBottomOf="@id/malt_text" />
+
+            <ImageView
+                android:id="@+id/clear_malt_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/malt_filter"
+                app:layout_constraintRight_toRightOf="@id/malt_filter"
+                app:layout_constraintTop_toTopOf="@id/malt_filter"
+                app:srcCompat="@drawable/clear_current_filter" />
+
+            <TextView
+                android:id="@+id/food_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/food"
+                app:layout_constraintBottom_toTopOf="@id/food_filter"
+                app:layout_constraintLeft_toLeftOf="@id/malt_filter"
+                app:layout_constraintRight_toRightOf="@id/malt_filter"
+                app:layout_constraintTop_toBottomOf="@id/malt_filter" />
+
+            <EditText
+                android:id="@+id/food_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:inputType="text"
+                app:layout_constraintBottom_toTopOf="@id/ibu_text"
+                app:layout_constraintLeft_toLeftOf="@id/food_text"
+                app:layout_constraintRight_toRightOf="@id/food_text"
+                app:layout_constraintTop_toBottomOf="@id/food_text" />
+
+            <ImageView
+                android:id="@+id/clear_food_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/food_filter"
+                app:layout_constraintRight_toRightOf="@id/food_filter"
+                app:layout_constraintTop_toTopOf="@id/food_filter"
+                app:srcCompat="@drawable/clear_current_filter" />
+
+            <TextView
+                android:id="@+id/ibu_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ibu_capitalized"
+                app:layout_constraintBottom_toTopOf="@id/abv_text"
+                app:layout_constraintLeft_toLeftOf="@id/food_filter"
+                app:layout_constraintRight_toLeftOf="@id/ibu_from_text"
+                app:layout_constraintTop_toBottomOf="@id/food_filter" />
+
+            <TextView
+                android:id="@+id/ibu_from_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                app:layout_constraintBottom_toBottomOf="@id/ibu_text"
+                app:layout_constraintLeft_toRightOf="@id/ibu_text"
+                app:layout_constraintRight_toLeftOf="@id/ibu_from_filter"
+                app:layout_constraintTop_toTopOf="@id/ibu_text" />
+
+            <EditText
+                android:id="@+id/ibu_from_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/ibu_text"
+                app:layout_constraintLeft_toRightOf="@id/ibu_from_text"
+                app:layout_constraintRight_toLeftOf="@id/ibu_to_text"
+                app:layout_constraintTop_toTopOf="@id/ibu_text" />
+
+            <TextView
+                android:id="@+id/ibu_to_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                app:layout_constraintBottom_toBottomOf="@id/ibu_text"
+                app:layout_constraintLeft_toRightOf="@id/ibu_from_filter"
+                app:layout_constraintRight_toLeftOf="@id/ibu_to_filter"
+                app:layout_constraintTop_toTopOf="@id/ibu_from_filter" />
+
+            <EditText
+                android:id="@+id/ibu_to_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/ibu_text"
+                app:layout_constraintLeft_toRightOf="@id/ibu_to_text"
+                app:layout_constraintRight_toRightOf="@id/food_filter"
+                app:layout_constraintTop_toTopOf="@id/ibu_text" />
+
+            <TextView
+                android:id="@+id/abv_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/abv_capitalized"
+                app:layout_constraintBottom_toTopOf="@id/ebc_text"
+                app:layout_constraintLeft_toLeftOf="@id/ibu_text"
+                app:layout_constraintRight_toLeftOf="@id/abv_from_text"
+                app:layout_constraintTop_toBottomOf="@id/ibu_text" />
+
+            <TextView
+                android:id="@+id/abv_from_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                app:layout_constraintBottom_toBottomOf="@id/abv_to_text"
+                app:layout_constraintLeft_toRightOf="@id/abv_text"
+                app:layout_constraintRight_toLeftOf="@id/abv_from_filter"
+                app:layout_constraintTop_toTopOf="@id/abv_text" />
+
+            <EditText
+                android:id="@+id/abv_from_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/abv_text"
+                app:layout_constraintLeft_toRightOf="@id/abv_from_text"
+                app:layout_constraintRight_toLeftOf="@id/abv_to_text"
+                app:layout_constraintTop_toTopOf="@id/abv_text" />
+
+            <TextView
+                android:id="@+id/abv_to_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                app:layout_constraintBottom_toBottomOf="@id/abv_text"
+                app:layout_constraintLeft_toRightOf="@id/abv_from_filter"
+                app:layout_constraintRight_toLeftOf="@id/abv_to_filter"
+                app:layout_constraintTop_toTopOf="@id/abv_text" />
+
+            <EditText
+                android:id="@+id/abv_to_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/abv_text"
+                app:layout_constraintLeft_toRightOf="@id/abv_to_text"
+                app:layout_constraintRight_toRightOf="@id/food_filter"
+                app:layout_constraintTop_toTopOf="@id/abv_text" />
+
+            <TextView
+                android:id="@+id/ebc_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ebc_capitalized"
+                app:layout_constraintBottom_toTopOf="@id/brewed_text"
+                app:layout_constraintLeft_toLeftOf="@id/abv_text"
+                app:layout_constraintRight_toLeftOf="@id/ebc_from_text"
+                app:layout_constraintTop_toBottomOf="@id/abv_text" />
+
+            <TextView
+                android:id="@+id/ebc_from_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_text"
+                app:layout_constraintLeft_toRightOf="@id/ebc_text"
+                app:layout_constraintRight_toLeftOf="@id/ebc_from_filter"
+                app:layout_constraintTop_toTopOf="@id/ebc_text" />
+
+            <EditText
+                android:id="@+id/ebc_from_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_text"
+                app:layout_constraintLeft_toRightOf="@id/ebc_from_text"
+                app:layout_constraintRight_toLeftOf="@id/ebc_to_text"
+                app:layout_constraintTop_toTopOf="@id/ebc_text" />
+
+            <TextView
+                android:id="@+id/ebc_to_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_text"
+                app:layout_constraintLeft_toRightOf="@id/ebc_from_filter"
+                app:layout_constraintRight_toLeftOf="@id/ebc_to_filter"
+                app:layout_constraintTop_toTopOf="@id/ebc_text" />
+
+            <EditText
+                android:id="@+id/ebc_to_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_text"
+                app:layout_constraintLeft_toRightOf="@id/ebc_to_text"
+                app:layout_constraintRight_toRightOf="@id/food_filter"
+                app:layout_constraintTop_toTopOf="@id/ebc_text" />
+
+            <TextView
+                android:id="@+id/brewed_text"
+                style="@style/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/brewed"
+                app:layout_constraintBottom_toTopOf="@id/brewed_after_text"
+                app:layout_constraintLeft_toLeftOf="@id/ebc_text"
+                app:layout_constraintRight_toLeftOf="@id/brewed_before_text"
+                app:layout_constraintTop_toBottomOf="@id/ebc_text" />
+
+            <TextView
+                android:id="@+id/brewed_before_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/before"
+                app:layout_constraintBottom_toBottomOf="@id/brewed_text"
+                app:layout_constraintLeft_toRightOf="@id/brewed_text"
+                app:layout_constraintRight_toLeftOf="@id/brewed_before_filter"
+                app:layout_constraintTop_toTopOf="@id/brewed_text" />
+
+            <TextView
+                android:id="@+id/brewed_before_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                app:layout_constraintBottom_toBottomOf="@id/brewed_text"
+                app:layout_constraintLeft_toRightOf="@id/brewed_before_text"
+                app:layout_constraintRight_toRightOf="@id/food_filter"
+                app:layout_constraintTop_toTopOf="@id/brewed_text" />
+
+            <ImageView
+                android:id="@+id/clear_before_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/brewed_before_filter"
+                app:layout_constraintRight_toRightOf="@id/brewed_before_filter"
+                app:layout_constraintTop_toTopOf="@id/brewed_before_filter"
+                app:srcCompat="@drawable/clear_current_filter" />
+
+            <TextView
+                android:id="@+id/brewed_after_text"
+                style="@style/filter_helper_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/after"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/brewed_text"
+                app:layout_constraintRight_toLeftOf="@id/brewed_after_filter"
+                app:layout_constraintTop_toBottomOf="@id/brewed_before_text" />
+
+            <TextView
+                android:id="@+id/brewed_after_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:background="?attr/metaBgColor"
+                app:layout_constraintBottom_toBottomOf="@id/brewed_after_text"
+                app:layout_constraintLeft_toRightOf="@id/brewed_after_text"
+                app:layout_constraintRight_toRightOf="@id/brewed_before_filter"
+                app:layout_constraintTop_toTopOf="@id/brewed_after_text" />
+
+            <ImageView
+                android:id="@+id/clear_after_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/brewed_after_filter"
+                app:layout_constraintRight_toRightOf="@id/brewed_after_filter"
+                app:layout_constraintTop_toTopOf="@id/brewed_after_filter"
+                app:srcCompat="@drawable/clear_current_filter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

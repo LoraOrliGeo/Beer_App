@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/secondaryLightColor</item>
+    </style>
+
+    <!-- Splash screen theme-->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="title">
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:layout_marginTop">@dimen/title_margin_top</item>
+    </style>
+
+    <!-- Style for "from", "to", "before" and "after" texts in filter_screen_xml -->
+    <style name="filter_helper_text">
+        <item name="android:layout_marginStart">@dimen/helper_title_margin_start</item>
+        <item name="android:textColor">?attr/textColor</item>
+        <item name="android:textSize">@dimen/helper_title_text_size</item>
+    </style>
+
+    <!-- Style for settings section titles -->
+    <style name="section_title">
+        <item name="android:layout_marginStart">@dimen/section_title_margin_start</item>
+        <item name="android:textSize">@dimen/section_title_text_size</item>
+        <item name="android:textColor">?attr/sectionTextColor</item>
+    </style>
+
+    <style name="LightTheme" parent="AppTheme">
+        <item name="textColor">@color/colorPrimaryDark</item>
+        <item name="metaBgColor">@color/gray</item>
+        <item name="bgColor">@color/primaryTextColor</item>
+        <item name="carouselBgColor">@color/secondaryLightColor</item>
+        <item name="sectionTextColor">@color/colorPrimaryDark</item>
+        <item name="switchBgColor">@color/primaryTextColor</item>
+        <item name="beerItemBgColor">@color/gray</item>
+    </style>
+
+    <style name="DarkTheme" parent="AppTheme">
+        <item name="textColor">@color/primaryTextColor</item>
+        <item name="metaBgColor">@color/gray</item>
+        <item name="bgColor">@color/colorPrimaryDark</item>
+        <item name="carouselBgColor">@color/colorPrimaryDark</item>
+        <item name="sectionTextColor">@color/colorPrimaryDark</item>
+        <item name="switchBgColor">@color/colorPrimaryDark</item>
+        <item name="beerItemBgColor">@color/colorPrimaryDark</item>
+    </style>
+</resources>

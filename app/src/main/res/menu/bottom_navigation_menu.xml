@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/favorite_beers"
+        android:icon="@drawable/favorites_white_icon"
+        android:title="@string/favorites"
+        android:menuCategory="secondary"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/beer_list2"
+        android:icon="@drawable/home_white_icon"
+        android:title="@string/home"
+        android:menuCategory="secondary"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings_white_icon"
+        android:menuCategory="secondary"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
+
+</menu>

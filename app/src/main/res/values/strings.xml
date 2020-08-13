@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">BeerApp</string>
+    <string name="beer_app">Beer App</string>
+    <string name="app_version">V 1.0.0</string>
+    <string name="beer_image_logo">beer</string>
+    <string name="text_login_button">Login</string>
+    <string name="beer_list_text">Beer list</string>
+    <string name="beer_details">Beer details</string>
+    <string name="abv">abv</string>
+    <string name="ebc">ebc</string>
+    <string name="ibu">ibu</string>
+    <string name="food_pairing">Food Pairing:</string>
+    <string name="brewers_tips">Brewers Tips:</string>
+
+    <string name="yeast">Yeast</string>
+    <string name="hops">Hops</string>
+    <string name="malt">Malt</string>
+    <string name="food">Food</string>
+    <string name="ibu_capitalized">IBU</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="abv_capitalized">ABV</string>
+    <string name="ebc_capitalized">EBC</string>
+    <string name="brewed">Brewed</string>
+    <string name="before">before</string>
+    <string name="after">after</string>
+    <string name="filters">Filters</string>
+    <string name="clear_filters">Clear filters</string>
+    <string name="favoritize">Favoritize</string>
+
+    <string name="could_not_be_added_message">The max number of favorite beers\n can not be exceed!</string>
+    <string name="dice">Dice</string>
+    <string name="beer_bottle">beer bottle</string>
+    <string name="user_image">user image</string>
+    <string name="notifications">Notifications</string>
+    <string name="language">Language</string>
+    <string name="theme">Dark Theme</string>
+    <string name="logout">Logout</string>
+    <string name="imperia_online_2020">Imperia Online 2020 ©</string>
+
+    <string name="fav_beer_added">"Beer was added to favorites!"</string>
+    <string name="fav_beer_removed">"Beer was removed from favorites!"</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+    <string name="get_random_beer_from_favorites">Get random beer\nfrom favorites</string>
+    <string name="enter_beer_name"> Enter beer name </string>
+    <string name="foods_example">food that pair the current beer</string>
+    <string name="notification_title">Hello there!</string>
+    <string name="notification_channel_id">myNotificationChannelId</string>
+    <string name="notification_body">It\'s been a while... come back to Beer App to check all new beers!</string>
+    <string name="notification_channel_name">Notification Message</string>
+    <string name="you_haven_t_added_favorite_beer_yet">You haven\'t added favorite beers yet!</string>
+    <string name="there_are_no_beers_to_show">There are no beers to show!</string>
+</resources>

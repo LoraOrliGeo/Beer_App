@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="favorite_beer"
+            type="com.example.domain.models.DetailBeer" />
+
+        <variable
+            name="click_listener"
+            type="com.example.beerapp.presenters.adapters.FavoriteBeerListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/pageMarginAndOffset"
+        android:layout_marginTop="@dimen/card_view_margin_top"
+        android:layout_marginRight="@dimen/pageMarginAndOffset"
+        android:layout_marginBottom="@dimen/card_view_margin_bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/carouselBgColor"
+            android:onClick="@{() -> click_listener.onClick(favorite_beer)}">
+
+            <ImageView
+                android:id="@+id/fav_beer_image"
+                android:layout_width="@dimen/beer_image_width"
+                android:layout_height="@dimen/beer_image_height"
+                android:layout_marginStart="@dimen/beer_image_horizontal_margin"
+                android:layout_marginTop="@dimen/between_views_margin"
+                android:layout_marginEnd="@dimen/beer_image_horizontal_margin"
+                android:background="@color/gray"
+                android:contentDescription="@string/beer_image_logo"
+                app:layout_constraintBottom_toTopOf="@id/fav_beer_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/beer_bottle" />
+
+            <TextView
+                android:id="@+id/fav_beer_name"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/beer_name_horizontal_margin"
+                android:layout_marginEnd="@dimen/beer_name_horizontal_margin"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/fav_beer_tagline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fav_beer_image"
+                tools:text="Beer Name" />
+
+            <TextView
+                android:id="@+id/fav_beer_tagline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/beer_tagline_horizontal_margin"
+                android:layout_marginTop="@dimen/between_views_margin"
+                android:layout_marginRight="@dimen/beer_tagline_horizontal_margin"
+                android:gravity="center"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toTopOf="@id/description_scroll_view"
+                app:layout_constraintLeft_toLeftOf="@id/fav_beer_name"
+                app:layout_constraintRight_toRightOf="@id/fav_beer_name"
+                app:layout_constraintTop_toBottomOf="@id/fav_beer_name"
+                tools:text="Our Ruthless IPA With A Belgian Twist." />
+
+            <ScrollView
+                android:id="@+id/description_scroll_view"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/between_views_margin"
+                app:layout_constraintBottom_toTopOf="@id/abv_text"
+                app:layout_constraintLeft_toLeftOf="@id/fav_beer_tagline"
+                app:layout_constraintRight_toRightOf="@id/fav_beer_tagline"
+                app:layout_constraintTop_toBottomOf="@id/fav_beer_tagline">
+
+                <TextView
+                    android:id="@+id/fav_beer_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/between_views_margin"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size"
+                    tools:text="This tentacled terminator packs a punch - ten punches to be precise. Each hop addition adds to the intense layers of depth in this red rye IPA. Toasty caramel and cinder toffee from crystal malts, cacao richness from intensely roasted malt and the spiciness of rye. Zesty pithiness from Citra and the robust resin of Chinook. This small batch exclusive brew is up-front intensity matched with twisted complexity. Aged in Rye Whisky Casks." />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/abv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/between_views_margin"
+                android:text="@string/abv"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/foods_text"
+                app:layout_constraintLeft_toLeftOf="@id/description_scroll_view"
+                app:layout_constraintRight_toLeftOf="@id/abv_value_text"
+                app:layout_constraintTop_toBottomOf="@id/description_scroll_view" />
+
+            <TextView
+                android:id="@+id/abv_value_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/between_views_margin"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toBottomOf="@id/abv_text"
+                app:layout_constraintLeft_toRightOf="@id/abv_text"
+                app:layout_constraintRight_toLeftOf="@id/ibu_text"
+                app:layout_constraintTop_toTopOf="@id/abv_text" />
+
+            <TextView
+                android:id="@+id/ibu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/ibu"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ibu_value_text"
+                app:layout_constraintLeft_toRightOf="@id/abv_value_text"
+                app:layout_constraintRight_toLeftOf="@id/ibu_value_text"
+                app:layout_constraintTop_toTopOf="@id/abv_value_text" />
+
+            <TextView
+                android:id="@+id/ibu_value_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/between_views_margin"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_value_text"
+                app:layout_constraintLeft_toRightOf="@id/ibu_text"
+                app:layout_constraintRight_toLeftOf="@id/ebc_text"
+                app:layout_constraintTop_toTopOf="@id/ibu_text" />
+
+            <TextView
+                android:id="@+id/ebc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/ebc"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_value_text"
+                app:layout_constraintLeft_toRightOf="@id/ibu_value_text"
+                app:layout_constraintRight_toLeftOf="@id/ebc_value_text"
+                app:layout_constraintTop_toTopOf="@id/ibu_value_text" />
+
+            <TextView
+                android:id="@+id/ebc_value_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/between_views_margin"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toBottomOf="@id/ebc_text"
+                app:layout_constraintLeft_toRightOf="@id/ebc_text"
+                app:layout_constraintRight_toRightOf="@id/description_scroll_view"
+                app:layout_constraintTop_toTopOf="@id/ebc_text" />
+
+            <TextView
+                android:id="@+id/foods_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/between_views_margin"
+                android:gravity="center"
+                android:text="@string/food_pairing"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toTopOf="@id/foods"
+                app:layout_constraintLeft_toLeftOf="@id/abv_text"
+                app:layout_constraintRight_toRightOf="@id/description_scroll_view"
+                app:layout_constraintTop_toBottomOf="@id/abv_text" />
+
+            <TextView
+                android:id="@+id/foods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/between_views_margin"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/foods_text"
+                app:layout_constraintRight_toRightOf="@id/foods_text"
+                app:layout_constraintTop_toBottomOf="@id/foods_text"
+                tools:text="@string/foods_example"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

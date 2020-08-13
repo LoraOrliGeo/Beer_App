@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bgColor" format="color" />
+    <attr name="textColor" format="color" />
+    <attr name="metaBgColor" format="color" />
+    <attr name="carouselBgColor" format="color" />
+    <attr name="sectionTextColor" format="color" />
+    <attr name="switchBgColor" format="color" />
+    <attr name="beerItemBgColor" format="color" />
+</resources>
